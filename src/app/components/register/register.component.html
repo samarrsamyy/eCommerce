@@ -1,0 +1,157 @@
+<section class="my-3 p-3">
+  <h2 class="h4">{{'register.Register Now' | translate}}:</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
+    <div class="my-2">
+      <label for="name">{{'register.name' |translate}}:</label>
+      <input
+        [ngClass]="{
+          isValid:
+            !registerForm.get('name')?.errors &&
+            !registerForm.get('name')?.touched,
+          'is-invalid':
+            registerForm.get('name')?.errors &&
+            registerForm.get('name')?.touched
+        }"
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+
+      @if( registerForm.get('name')?.errors &&
+      registerForm.get('name')?.touched){
+      <div class="alert w-50 alert-danger mt-1">
+        @if (registerForm.get('name')?.getError('required')) {
+        <p class="m-0">{{'register.nameErrors.required' |translate}}</p>
+        } @else if (registerForm.get('name')?.getError('minlength')) {
+        <p class="m-0">{{'register.nameErrors.minlength' |translate}}</p>
+        } @else if (registerForm.get('name')?.getError('maxlength')) {
+        <p class="m-0">{{'register.nameErrors.maxlength' |translate}}</p>
+        }
+      </div>
+      }
+    </div>
+
+    <div class="my-2">
+      <label for="email">{{'register.email'| translate}}:</label>
+      <input
+        [ngClass]="{
+          isValid:
+            !registerForm.get('email')?.errors &&
+            !registerForm.get('email')?.touched,
+          'is-invalid':
+            registerForm.get('email')?.errors &&
+            registerForm.get('email')?.touched
+        }"
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+
+      @if( registerForm.get('email')?.errors &&
+      registerForm.get('email')?.touched){
+      <div class="alert w-50 alert-danger mt-1">
+        @if (registerForm.get('email')?.getError('required')) {
+        <p class="m-0">{{'register.emailErrors.required' |translate}}</p>
+        } @else if (registerForm.get('email')?.getError('email')) {
+        <p class="m-0">{{'register.emailErrors.invalid' |translate}}</p>
+        }
+      </div>
+      }
+    </div>
+
+    <div class="my-2">
+      <label for="password">{{'register.password'|translate}}:</label>
+      <input
+        [ngClass]="{
+          isValid:
+            !registerForm.get('password')?.errors &&
+            !registerForm.get('password')?.touched,
+          'is-invalid':
+            registerForm.get('password')?.errors &&
+            registerForm.get('password')?.touched
+        }"
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+
+      @if( registerForm.get('password')?.errors &&
+      registerForm.get('password')?.touched){
+      <div class="alert w-50 alert-danger mt-1">
+        @if (registerForm.get('password')?.getError('required')) {
+        <p class="m-0">{{'register.passwordErrors.required' |translate}}</p>
+        } @else if (registerForm.get('password')?.getError('pattern')) {
+        <p class="m-0">{{'register.passwordErrors.pattern' |translate}}</p>
+        }
+      </div>
+
+      }
+    </div>
+
+    <div class="my-2">
+      <label for="rePassword">{{'register.rePassword'| translate}}:</label>
+      <input
+        [ngClass]="{
+          isValid:
+            !registerForm.getError('notMatch') &&
+            !registerForm.get('rePassword')?.touched,
+          'is-invalid':
+            registerForm.getError('notMatch') &&
+            registerForm.get('rePassword')?.touched
+        }"
+        type="password"
+        class="form-control"
+        id="rePassword"
+        formControlName="rePassword"
+      />
+
+      @if(registerForm.getError('notMatch') &&
+      registerForm.get('rePassword')?.touched){
+      <div class="alert w-50 alert-danger mt-1">
+        <p class="m-0">{{'register.rePasswordErrors.notMatch'|translate}}</p>
+      </div>
+      }
+    </div>
+
+    <div class="my-2">
+      <label for="phone">{{'register.phone' |translate}}:</label>
+      <input
+        [ngClass]="{
+          isValid:
+            !registerForm.get('phone')?.errors &&
+            !registerForm.get('phone')?.touched,
+          'is-invalid':
+            registerForm.get('phone')?.errors &&
+            registerForm.get('phone')?.touched
+        }"
+        type="tel"
+        class="form-control"
+        id="phone"
+        formControlName="phone"
+      />
+
+      @if( registerForm.get('phone')?.errors &&
+      registerForm.get('phone')?.touched){
+      <div class="alert w-50 alert-danger mt-1">
+        @if (registerForm.get('phone')?.getError('required')) {
+        <p class="m-0">{{'register.phoneErrors.required' |translate}}</p>
+        } @else if (registerForm.get('phone')?.getError('pattern')) {
+        <p class="m-0">{{'register.phoneErrors.pattern' |translate}}</p>
+        }
+      </div>
+      }
+    </div>
+
+    <button type="submit" class="btn btn-main d-block ms-auto">
+      {{'register.Register'|translate}}
+    </button>
+
+    @if (msgSuccess) {
+    <p class="alert alert-success text-center">{{'register.Account has been created' |translate}}</p>
+    }
+  </form>
+</section>

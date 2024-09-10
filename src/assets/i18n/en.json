@@ -1,0 +1,132 @@
+{
+  "navbar": {
+    "Home": "Home",
+    "Products": "Products",
+    "Categories": "Categories",
+    "Brands": "Brands",
+    "My Orders": "My Orders",
+    "SignOut": "SignOut"
+  },
+  "cart": {
+    "title": "Shop Cart:",
+    "totalCartPrice": "Total Cart Price",
+    "clearCart": "Clear Cart",
+    "price": "Price",
+    "delete": "Delete",
+    "goToPayment": "Go to Payment",
+    "emptyCart": "Your cart is empty"
+  },
+
+  "payment": {
+    "title": "Payment Details",
+    "paymentMethod": "Payment Method",
+    "cashOnDelivery": "Cash on Delivery",
+    "creditCard": "Credit Card"
+  },
+  "checkOut": "Check Out",
+
+
+  "All Categories":"All Categories",
+  "All Products":"All Products",
+  "All Brands":"All Brands",
+  "WishList":"WishList",
+  "Remove From WL":"Remove From WL",
+  "Shop Popular Categories": "Shop Popular Categories",
+  "Children’s books": "Children’s books",
+  "Electronics": "Electronics",
+  "Mobiles": "Mobiles",
+  "Men’s Sportswear": "Men’s Sportswear",
+  "Men": "Men",
+  "Woman": "Woman",
+  "Home": "Home",
+  "Appliances": "Appliances",
+  "Beauty & Health": "Beauty & Health",
+  "Baby & Toys": "Baby & Toys",
+  "Music": "Music",
+  "Women’s Fashion": "Women’s Fashion",
+  "Men's Fashion": "Men's Fashion",
+  "SuperMarket": "SuperMarket",
+  "Books": "Books",
+
+  "register": {
+    "Register Now": "Register Now",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "rePassword": "Confirm Password",
+    "phone": "Phone",
+    "Register": "Register",
+    "Account has been created": "Account has been created",
+    "nameErrors": {
+      "required": "*Name required*",
+      "minlength": "*Min Character 3*",
+      "maxlength": "*Max Character 20*"
+    },
+    "emailErrors": {
+      "required": "*Email required*",
+      "invalid": "*Enter Valid Email*"
+    },
+    "passwordErrors": {
+      "required": "*Password required*",
+      "pattern": "*Must be at least 6 chars*"
+    },
+    "rePasswordErrors": {
+      "notMatch": "*Password and Confirm Password must be the same*"
+    },
+    "phoneErrors": {
+      "required": "*Phone required*",
+      "pattern": "*Enter valid phone number*"
+    }
+  },
+
+  "login": {
+    "Login": "Login",
+    "email": {
+      "email": "Email",
+      "required": "*Email required*",
+      "invalid": "*Enter Valid Email*"
+    },
+    "password": {
+      "password": "Password",
+      "required": "*Password required*",
+      "invalid": "*Must be at least 6 chars*"
+    },
+    "forgetPassword": "Forget Password",
+    "loginButton": "Login",
+    "successMessage": "Login Success"
+  },
+
+  "Get the FreshCart app": "Get the FreshCart app",
+  "We will send you a link, open it on your phone to download the app.": "We will send you a link, open it on your phone to download the app.",
+  "Share App Link": "Share App Link",
+  "Payment Partners": "Payment Partners",
+  "Get deliveries with FreshCart": "Get deliveries with FreshCart",
+  "Add to Cart": "Add to Cart",
+  "Add to WishList":"Add to Wishlist",
+    "cash":"Cash",
+
+
+  "orders": {
+    "orderNo": "Order no.",
+    "shippingAddress": "Shipping Address",
+    "createdAt": "Created Time",
+    "paymentMethod": "Payment Method",
+    "creditCard": "Credit Card",
+    "isDeliveredYes": "isDelivered: Yes",
+    "isDeliveredNo": "isDelivered: Not Yet",
+    "isPaidYes": "Paid",
+    "isPaidNo": "Not Paid",
+    "items": "items",
+    "totalPrice": "total price"
+  },
+
+  "shipping": {
+    "addressDetails": "Address Details",
+    "detailsRequired": "details required",
+    "phone": "Phone",
+    "phoneRequired": "phone required",
+    "enterValidPhone": "Enter Valid phone",
+    "city": "City",
+    "cityRequired": "city required"
+  }
+}

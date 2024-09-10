@@ -1,0 +1,130 @@
+{
+  "navbar": {
+    "Home": "الرئيسية",
+    "Products": "المنتجات",
+    "Categories": "الاقسام",
+    "Brands": "علامات تجارية",
+    "My Orders": "طلبياتي",
+    "SignOut": "تسجيل خروج"
+  },
+
+  "register": {
+    "Register Now": "سجل الآن",
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "rePassword": "تأكيد كلمة المرور",
+    "phone": "الهاتف",
+    "Register": "تسجيل",
+    "Account has been created": "تم إنشاء الحساب",
+    "nameErrors": {
+      "required": "*الاسم مطلوب*",
+      "minlength": "*الحد الأدنى 3 أحرف*",
+      "maxlength": "*الحد الأقصى 20 حرف*"
+    },
+    "emailErrors": {
+      "required": "*البريد الإلكتروني مطلوب*",
+      "invalid": "*أدخل بريد إلكتروني صالح*"
+    },
+    "passwordErrors": {
+      "required": "*كلمة المرور مطلوبة*",
+      "pattern": "*يجب أن تكون على الأقل 6 أحرف*"
+    },
+    "rePasswordErrors": {
+      "notMatch": "*كلمة المرور وتأكيد كلمة المرور يجب أن تكون متطابقة*"
+    },
+    "phoneErrors": {
+      "required": "*الهاتف مطلوب*",
+      "pattern": "*أدخل رقم هاتف صالح*"
+    }
+  },
+  "login": {
+    "Login": "تسجيل الدخول:",
+    "email": {
+      "email": "البريد الإلكتروني:",
+      "required": "*البريد الإلكتروني مطلوب*",
+      "invalid": "*أدخل بريد إلكتروني صالح*"
+    },
+    "password": {
+      "password": "كلمة المرور:",
+      "required": "*كلمة المرور مطلوبة*",
+      "invalid": "*يجب أن تكون على الأقل 6 أحرف*"
+    },
+    "forgetPassword": "نسيت كلمة المرور",
+    "loginButton": "تسجيل الدخول",
+    "successMessage": "تم تسجيل الدخول بنجاح"
+  },
+  "cart": {
+    "title": "عربة التسوق:",
+    "totalCartPrice": "السعر الإجمالي للعربة",
+    "clearCart": "إفراغ العربة",
+    "price": "السعر",
+    "delete": "حذف",
+    "goToPayment": "الذهاب للدفع",
+    "emptyCart": "عربة التسوق فارغة"
+  },
+
+  "payment": {
+    "title": "تفاصيل الدفع",
+    "paymentMethod": "طريقة الدفع",
+    "cashOnDelivery": "الدفع عند الاستلام",
+    "creditCard": "بطاقة ائتمان"
+  },
+
+  "shipping": {
+    "addressDetails": "تفاصيل العنوان",
+    "detailsRequired": "التفاصيل مطلوبة",
+    "phone": "رقم الهاتف",
+    "phoneRequired": "الهاتف مطلوب",
+    "enterValidPhone": "أدخل رقم هاتف صحيح",
+    "city": "المدينة",
+    "cityRequired": "المدينة مطلوبة"
+  }
+,
+  "checkOut": "ادفع",
+  "All Categories": " الفئات",
+  "All Products": "جميع المنتجات",
+  "All Brands": "جميع الماركات",
+  "WishList": "قائمة الرغبات",
+  "Remove From WL": " إزالة من قائمة الرغبات",
+
+  "Shop Popular Categories": "تسوق الفئات الشائعة",
+  "Children’s books": "كتب الأطفال",
+  "Electronics": "الإلكترونيات",
+  "Mobiles": "الهواتف المحمولة",
+  "Men’s Sportswear": "ملابس الرياضة للرجال",
+  "Men": "الرجال",
+  "Woman": "النساء",
+  "Home": "المنزل",
+  "Appliances": "الأجهزة",
+  "Beauty & Health": "الجمال والصحة",
+  "Baby & Toys": "الأطفال والألعاب",
+  "Music": "الموسيقى",
+  "Women's Fashion": "أزياء النساء",
+  "Men's Fashion": "أزياء الرجال",
+  "SuperMarket": "السوبرماركت",
+  "Books": "الكتب",
+
+  "Get the FreshCart app": "احصل على تطبيق FreshCart",
+  "We will send you a link, open it on your phone to download the app.": "سوف نرسل لك رابطًا، افتحه على هاتفك لتنزيل التطبيق.",
+  "Share App Link": "مشاركة رابط التطبيق",
+  "Payment Partners": "شركاء الدفع",
+  "Get deliveries with FreshCart": "احصل على التوصيلات مع FreshCart",
+  "Add to Cart": "أضف الى سلة المشتريات",
+  "Add to WishList": "قائمة الرغبات",
+  "cash": "عند الإستلام",
+
+  "orders": {
+    "orderNo": "رقم الطلب.",
+    "shippingAddress": "عنوان الشحن",
+    "createdAt": "وقت الإنشاء",
+    "paymentMethod": "طريقة الدفع",
+    "creditCard": "بطاقة ائتمان",
+    "isDeliveredYes": "تم التسليم: نعم",
+    "isDeliveredNo": "تم التسليم: لم يتم بعد",
+    "isPaidYes": "مدفوع",
+    "isPaidNo": "غير مدفوع",
+    "items": "العناصر",
+    "totalPrice": "السعر الإجمالي"
+  }
+}

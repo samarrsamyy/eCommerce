@@ -1,0 +1,34 @@
+<section>
+
+  <h2> {{'WishList' |translate}} <i class="fa-regular fa-heart"></i></h2>
+
+  <div class="row g-4">
+    @for (product of wishList(); track product.id) {
+      <div class="col col-md-2">
+        <div class="product p-2">
+          <div [routerLink]="['/details' , product.id]" >
+            <img [src]="product.imageCover" class="w-100" [alt]="product.title" />
+          <h3 class="small text-main">{{ product.category.name }}</h3>
+          <h4 class="h6">{{ product.title.split(" ", 2).join(" ") }}</h4>
+  
+          <div class="d-flex justify-content-between align-items-center">
+            <span>{{ product.price | currency:'GBP' }}</span>
+            <div>
+              @for (num of [1,2,3,4,5].slice(0,product.ratingsAverage ); track
+              $index) {
+              <span> <i class="fas fa-star rating-color"></i></span>
+              } @if (product.ratingsAverage % 1 !== 0) {
+              <i class="fas fa-star-half-stroke rating-color"></i>
+              }
+  
+              <span class="text-muted">{{ product.ratingsAverage }}</span>
+            </div>
+          </div>
+          </div>
+          <button class="btn-main w-100" (click)="getProduct(product.id)">{{'Add to Cart' | translate}}</button>
+          <button class="btn-main w-100" (click)="removeFromList(product.id)">{{'Remove From WL' | translate}}<i class="fa-regular fa-heart"></i></button>
+        </div>
+      </div>
+    }
+  </div>
+</section>

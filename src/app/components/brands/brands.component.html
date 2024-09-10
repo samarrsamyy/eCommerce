@@ -1,0 +1,14 @@
+<section>
+
+  <h2> {{'All Brands' |translate}}</h2>
+
+  <div class="row g-4">
+    @for (brand of brandList(); track brand._id) {
+    <div class="col col-md-2 cr">
+      <div>
+        <img [src]="brand.image" [alt]="brand.name" class="w-100"  height="200px"/>
+      </div>
+    </div>
+    }
+  </div>
+</section>

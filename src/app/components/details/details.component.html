@@ -1,0 +1,53 @@
+@if (productDetails) {
+<section>
+  <div class="row align-items-center">
+    <div class="col col-md-3">
+      <div>
+
+        <owl-carousel-o [options]="ProductOptions">
+
+      @for (productImg of productDetails.images; track $index) {
+        <ng-template carouselSlide>
+          <img
+          [src]= "productImg"
+          class="w-100"
+          [alt]="productDetails.title"
+        />
+        </ng-template>
+      }
+      
+        </owl-carousel-o>
+
+
+
+       
+      </div>
+    </div>
+    <div class="col col-md-9">
+      <div>
+        <h2>{{ productDetails.title }}</h2>
+        <p class="text-muted">{{ productDetails.description }}</p>
+
+        <h3 class="h6">{{ productDetails.category.name }}</h3>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <span>{{ productDetails.price }} EGP</span>
+          <div>
+            @for (num of [1,2,3,4,5].slice(0,productDetails.ratingsAverage );
+            track $index) {
+            <span> <i class="fas fa-star rating-color"></i></span>
+            } @if (productDetails.ratingsAverage % 1 !== 0) {
+            <i class="fas fa-star-half-stroke rating-color"></i>
+            }
+
+            <span class="text-muted">{{ productDetails.ratingsAverage }}</span>
+          </div>
+        </div>
+        <button class="btn-main w-100" (click)="getProduct(productDetails.id)">+ {{'Add to Cart' |translate}}</button>
+        <button class="btn-main w-100" (click)="addToWishList(productDetails.id)">{{'Add to WishList' | translate}}</button>
+
+      </div>
+    </div>
+  </div>
+</section>
+}

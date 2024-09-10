@@ -1,0 +1,19 @@
+<section>
+
+  <h2> {{'All Categories' |translate}}</h2>
+
+  <div class="row g-4">
+    @for (cat of categoryList(); track cat._id) {
+    <div class="col col-md-2 cr">
+      <div>
+        <img [src]="cat.image" [alt]="cat.name" class="w-100"  height="250px"/>
+        <h2 class="h4">{{ cat.name |translate }}</h2>
+      </div>
+    </div>
+    }
+  </div>
+ 
+
+
+
+</section>

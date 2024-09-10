@@ -1,0 +1,60 @@
+<section>
+  <form [formGroup]="shippingAdress" (ngSubmit)="submit()">
+    <div class="my-2">
+      <label for="details">{{'shipping.addressDetails' |translate}}:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="details"
+        formControlName="details"
+      />
+
+      @if( shippingAdress.get('details')?.errors &&
+      shippingAdress.get('details')?.touched){
+      <div class="alert w-50 alert-danger mt-1">
+        @if (shippingAdress.get('details')?.getError('required')) {
+        <p class="m-0">*{{'shipping.detailsRequired' |translate}}*</p>
+        }
+      </div>
+      }
+    </div>
+    <div class="my-2">
+      <label for="phone">{{'shipping.phone' |translate}}:</label>
+      <input
+        type="tel"
+        class="form-control"
+        id="phone"
+        formControlName="phone"
+      />
+
+      @if( shippingAdress.get('phone')?.errors &&
+      shippingAdress.get('phone')?.touched){
+      <div class="alert w-50 alert-danger mt-1">
+        @if (shippingAdress.get('phone')?.getError('required')) {
+        <p class="m-0">*{{'shipping.phoneRequired'|translate}}*</p>
+        } @else if (shippingAdress.get('phone')?.getError('pattern')) {
+        <p class="m-0">*{{'shipping.enterValidPhone' |translate}}*</p>
+        }
+      </div>
+      }
+    </div>
+    <div class="my-2">
+      <label for="city">{{'shipping.city' |translate}}:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="city"
+        formControlName="city"
+      />
+      @if( shippingAdress.get('city')?.errors && shippingAdress.get('city')?.touched){
+        <div class="alert w-50 alert-danger mt-1">
+          @if (shippingAdress.get('city')?.getError('required')) {
+          <p class="m-0">*{{'shipping.cityRequired' |translate}}*</p>
+          }
+        </div>
+        }
+    </div>
+
+    <button type="submit" class="btn-main">{{'checkOut' |translate}}</button>
+  </form>
+</section>

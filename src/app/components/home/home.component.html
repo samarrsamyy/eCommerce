@@ -1,0 +1,141 @@
+<!-- main category -->
+<section>
+  <div class="row g-0">
+    <div class="col-12 col-md-10">
+      <div>
+        <owl-carousel-o [options]="CategoryOptionsMain">
+          <ng-template carouselSlide>
+            <img
+              src="./assets/images/img1.avif"
+              height="400px"
+              class="w-100"
+              alt=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="./assets/images/img2.avif"
+              height="400px"
+              class="w-100"
+              alt=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="./assets/images/img3.avif"
+              height="400px"
+              class="w-100"
+              alt=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="./assets/images/img4.avif"
+              height="400px"
+              class="w-100"
+              alt=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="./assets/images/img5.avif"
+              height="400px"
+              class="w-100"
+              alt=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="./assets/images/img6.avif"
+              height="400px"
+              class="w-100"
+              alt=""
+            />
+          </ng-template>
+          <ng-template carouselSlide>
+            <img
+              src="./assets/images/img7.avif"
+              height="400px"
+              class="w-100"
+              alt=""
+            />
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+    <div class="col-12 col-md-2">
+      <div>
+        <img
+          src="./assets/images/slider-image-1.jpeg"
+          height="200px"
+          class="w-100"
+          alt=""
+        />
+        <img
+          src="./assets/images/slider-image-2.jpeg"
+          height="200px"
+          class="w-100"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="my-2">
+  <h2>{{'Shop Popular Categories' | translate}}</h2>
+
+  <owl-carousel-o [options]="CategoryOptions">
+    @for (category of categoryList(); track category._id) {
+    <ng-template carouselSlide>
+      <!-- content -->
+      <div>
+        <img
+          [src]="category.image"
+          [alt]="category.name"
+          class="w-100"
+          height="250px"
+        />
+        <h3 class="h6">{{ category.name | translate }}</h3>
+      </div>
+    </ng-template>
+    }
+  </owl-carousel-o>
+</section>
+
+<!-- Products -->
+
+<section>
+  <div class="row g-3">
+    @for (product of productList().slice(0,12); track product.id) {
+    <div class="col col-md-2">
+      <div class="product p-2">
+        <div [routerLink]="['/details' , product.id]" >
+          <img [src]="product.imageCover" class="w-100" [alt]="product.title" />
+        <h3 class="small text-main">{{ product.category.name }}</h3>
+        <h4 class="h6">{{ product.title.split(" ", 2).join(" ") }}</h4>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <span>{{ product.price | currency:'GBP' }}  </span>
+          <div>
+            @for (num of [1,2,3,4,5].slice(0,product.ratingsAverage ); track
+            $index) {
+            <span> <i class="fas fa-star rating-color"></i></span>
+            } @if (product.ratingsAverage % 1 !== 0) {
+            <i class="fas fa-star-half-stroke rating-color"></i>
+            }
+
+            <span class="text-muted">{{ product.ratingsAverage }}</span>
+          </div>
+        </div>
+        </div>
+        <button class="btn-main w-100" (click)="getProduct(product.id)">{{'Add to Cart' | translate}}</button>
+        <button class="btn-main w-100" (click)="addToWishList(product.id)">{{'Add to WishList' | translate}}</button>
+
+      </div>
+    </div>
+    }
+    
+  </div>
+</section>

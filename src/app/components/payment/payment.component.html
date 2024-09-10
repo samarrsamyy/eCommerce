@@ -1,0 +1,38 @@
+<section class="bg-main-light my-3 p-3">
+  <h2 class="text-main text-center">{{'payment.title'|translate}}</h2>
+
+  <form [formGroup]="paymentMethod" (ngSubmit)="submit()"cc>
+    <div class="my-4">
+      <h3 class="h6 text-main">{{'payment.paymentMethod'|translate}}:</h3>
+      <div class="my-2">
+        <label for="cash" class="p-2">
+          <input
+            type="radio"
+            id="cash"
+            name="pay"
+            value="Cash on Delivery"
+            formControlName="pay"
+          />
+          {{'payment.cashOnDelivery'|translate}}
+        </label>
+      </div>
+
+      <div class="my-2">
+        <label for="visa" class="p-2">
+          <input
+            type="radio"
+            id="visa"
+            name="pay"
+            value="Credit Card"
+            formControlName="pay"
+          />
+          {{'payment.creditCard'|translate}}
+        </label>
+      </div>
+    </div>
+
+
+
+    <button class="btn-main" type="submit">{{'checkOut'|translate}}</button>
+  </form>
+</section>
