@@ -109,7 +109,7 @@
 <section>
   <div class="row g-3">
     @for (product of productList().slice(0,12); track product.id) {
-    <div class="col col-md-2">
+    <div class="col col-12 col-md-2">
       <div class="product p-2">
         <div [routerLink]="['/details' , product.id]" >
           <img [src]="product.imageCover" class="w-100" [alt]="product.title" />

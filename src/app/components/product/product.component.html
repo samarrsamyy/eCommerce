@@ -4,7 +4,7 @@
 
   <div class="row g-4">
     @for (product of productList(); track product.id) {
-      <div class="col col-md-2">
+      <div class="col col-12 col-md-2">
         <div class="product p-2">
           <div [routerLink]="['/details' , product.id]" >
             <img [src]="product.imageCover" class="w-100" [alt]="product.title" />
