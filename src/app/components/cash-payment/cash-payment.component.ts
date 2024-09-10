@@ -1,4 +1,4 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, computed, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import { PaymentService } from '../../core/services/payment.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
@@ -11,6 +11,7 @@ import { NgClass } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 import { TranslateModule } from '@ngx-translate/core';
+import { CartService } from '../../core/services/cart.service';
 
 @Component({
   selector: 'app-cash-payment',
@@ -25,6 +26,10 @@ export class CashPaymentComponent implements OnDestroy {
   private readonly _FormBuilder = inject(FormBuilder);
   private readonly _ToastrService = inject(ToastrService);
   private readonly _Router = inject(Router);
+  private readonly _CartService=inject(CartService)
+
+  itemNumber: Signal<number> = computed(()=> this._CartService.cartNumber())
+
 
   shippingAdress: FormGroup = this._FormBuilder.group({
     details: [null, [Validators.required]],
@@ -51,6 +56,10 @@ export class CashPaymentComponent implements OnDestroy {
             .subscribe({
               next: (res) => {
                 console.log(res);
+                this._CartService.getCartProducts().subscribe({
+                  next: (res) => {
+                    this._CartService.cartNumber.set(res.numOfCartItems);
+                  },})
 
                 this._ToastrService.success('Order Created Successful!');
                 this._Router.navigate(['/allorders']);
